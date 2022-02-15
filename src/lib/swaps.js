@@ -55,6 +55,20 @@ class Swaps {
             return { error: e };
         }
        }
+       async getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity }) {
+        try{   
+            if(this[this.dex] === undefined){
+                const dexInstance = await getDexInstance(this.dex);
+                this[this.dex] = dexInstance;
+            }
+       const response = await this[this.dex].getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity });
+
+        return response;
+        }
+        catch(e){
+            return { error: e };
+        }
+    }
 }
 
 async function getDex() {
