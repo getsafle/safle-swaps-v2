@@ -17,6 +17,16 @@ class Swaps {
         }
         this.dex = dex;
     }    
+    
+    async getSupportedTokens() {
+        if(this[this.dex] === undefined){
+            const dexInstance = await getDexInstance(this.dex);
+            this[this.dex] = dexInstance;
+        }
+        const  response = await this[this.dex].getSupportedTokens();
+        return response;
+    }
+
 }
 
 async function  getDex(){
