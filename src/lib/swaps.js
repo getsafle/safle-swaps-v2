@@ -1,6 +1,7 @@
 const Web3 = require('web3');
 const response = require('../constants/responses');
 const { supportedDex } = require('../dex');
+const { getDexInstance } = require('../utils/helper');
 
 class Swaps {
 
