@@ -1,0 +1,22 @@
+{
+  "name": "@getsafle/safle-swaps-v2",
+  "version": "1.0.0",
+  "description": "Safle Swaps V2 SDK ",
+  "main": "/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getsafle/safle-swaps-v2.git"
+  },
+  "author": "getsafle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getsafle/safle-swaps-v2/issues"
+  },
+  "homepage": "https://github.com/getsafle/safle-swaps-v2#readme",
+  "dependencies": {
+    "web3": "^1.7.0"
+  }
+}
