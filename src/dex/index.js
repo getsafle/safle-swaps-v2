@@ -1,5 +1,5 @@
-const oneInch = require(''); // placeholders for dex controller
-const uniswap = require(''); // placeholders for dex controller
+const oneInch = require('@getsafle/1inch-controller');
+const uniswap = require('@getsafle/uniswap-controller');
 
 const supportedDex = [ 'oneInch', 'uniswap' ];
 
