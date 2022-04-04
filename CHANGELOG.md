@@ -8,3 +8,9 @@
     * Get exchange rates for a given token pair
     * Get esitmated gas for a transaction
     * Get raw transaction for a swap
+
+### 1.0.2 (2022-04-01)
+
+##### Updates
+
+* Updated entry file in package.json
