@@ -14,3 +14,9 @@
 ##### Updates
 
 * Updated entry file in package.json
+
+### 1.0.3 (2022-05-02)
+
+##### Updates
+
+* Added method to get exchange rates from all supported DEX's
