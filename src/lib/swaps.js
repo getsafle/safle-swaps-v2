@@ -70,6 +70,26 @@ class Swaps {
             return { error: e };
         }
     }
+
+    async getRates({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity }) {
+        try {
+            let response =[];
+            let rate;
+            const dexList = await getDex();
+
+            for (let dexInstance of dexList) {
+                this[this.dex] = await getDexInstance(dexInstance);
+
+                rate = await this[this.dex].getExchangeRate({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity });
+               
+                response.push({ dexInstance, rate });
+              }
+             return response;
+        }
+        catch (e) {
+            return { error: e };
+        }
+    }
 }
 
 async function getDex() {

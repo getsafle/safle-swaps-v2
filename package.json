@@ -1,6 +1,6 @@
 {
   "name": "@getsafle/safle-swaps-v2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Safle Swaps V2 SDK ",
   "main": "src/index.js",
   "scripts": {
