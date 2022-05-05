@@ -27,13 +27,13 @@ class Swaps {
         return response;
     }
 
-    async getExchangeRates({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity }) {
+    async getExchangeRates({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance }) {
         try {
             if (this[this.dex] === undefined) {
                 const dexInstance = await getDexInstance(this.dex);
                 this[this.dex] = dexInstance;
             }
-            const response = await this[this.dex].getExchangeRate({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity });
+            const response = await this[this.dex].getExchangeRate({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance });
 
             return response;
         }
@@ -42,27 +42,27 @@ class Swaps {
         }
     }
 
-    async getEstimatedGas({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity }) {
+    async getEstimatedGas({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance }) {
 
         try{   
            if(this[this.dex] === undefined){
                const dexInstance = await getDexInstance(this.dex);
                this[this.dex] = dexInstance;
            }
-           const response  = await this[this.dex].getEstimatedGas({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity});
+           const response  = await this[this.dex].getEstimatedGas({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance});
            return response;
            }
         catch(e){
             return { error: e };
         }
        }
-       async getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity }) {
+       async getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance }) {
         try{   
             if(this[this.dex] === undefined){
                 const dexInstance = await getDexInstance(this.dex);
                 this[this.dex] = dexInstance;
             }
-       const response = await this[this.dex].getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity });
+       const response = await this[this.dex].getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance });
 
         return response;
         }
@@ -71,7 +71,7 @@ class Swaps {
         }
     }
 
-    async getRates({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity }) {
+    async getRates({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance }) {
         try {
             let response =[];
             let rate;
@@ -80,7 +80,7 @@ class Swaps {
             for (let dexInstance of dexList) {
                 this[this.dex] = await getDexInstance(dexInstance);
 
-                rate = await this[this.dex].getExchangeRate({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity });
+                rate = await this[this.dex].getExchangeRate({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance });
                
                 response.push({ dexInstance, rate });
               }
