@@ -42,27 +42,29 @@ Get supported DEX’s: Returns the list of all the supported DEX’s.
     
 3. Get Exchange Rates: This method returns exchange rates for a token pair
     
-    `await swap.getExchangeRates({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity });`
+    `await swap.getExchangeRates({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance });`
     
     - `toContractAddress` - contract address of the destination token
     - `toContractDecimal` - decimal of destination token
     - `fromContractAddress` - contract address of source token
     - `fromContractDecimal` - decimal of source token
     - `fromQuantity` - source quantity in wei
-
+    - `slippageTolerance` - Slippage tolerance percentage in integer
+    
 4. Get Estimated Gas: This method returns estimated gas for the swap transaction
     
-    `await swap.getEstimatedGas({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity })`
+    `await swap.getEstimatedGas({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance })`
     
     - `toContractAddress` - contract address of the destination token
     - `toContractDecimal` - decimal of destination token
     - `fromContractAddress` - contract address of source token
     - `fromContractDecimal` - decimal of source token
     - `fromQuantity` - source quantity in wei
+    - `slippageTolerance` - Slippage tolerance percentage in integer
 
 5. Get Raw Transaction: This method returns the raw transaction
     
-    `await swap.getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity })`
+    `await swap.getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance })`
     
     - `toContractAddress` - contract address of the destination token
     - `toContractDecimal` - decimal of destination token
@@ -70,13 +72,15 @@ Get supported DEX’s: Returns the list of all the supported DEX’s.
     - `fromContractDecimal` - decimal of source token
     - `fromQuantity` - source quantity in wei
     - `walletAddress` - public address of the wallet for the transaction
+    - `slippageTolerance` - Slippage tolerance percentage in integer
 
 6. Get Rates: This method returns exchange rates for a token pair accross all supported DEX's
     
-    `await swap.getRates({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity });`
+    `await swap.getRates({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance });`
     
     - `toContractAddress` - contract address of the destination token
     - `toContractDecimal` - decimal of destination token
     - `fromContractAddress` - contract address of source token
     - `fromContractDecimal` - decimal of source token
     - `fromQuantity` - source quantity in wei
+    - `slippageTolerance` - Slippage tolerance percentage in integer
