@@ -20,3 +20,9 @@
 ##### Updates
 
 * Added method to get exchange rates from all supported DEX's
+
+### 1.0.4 (2022-05-05)
+
+##### Updates
+
+* Updated methods to accept slippage as a parameter
