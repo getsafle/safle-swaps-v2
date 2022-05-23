@@ -26,3 +26,9 @@
 ##### Updates
 
 * Updated methods to accept slippage as a parameter
+
+### 1.0.5 (2022-05-23)
+
+##### Updates
+
+* Updated uniswap and 1Inch controllers that update error handling
