@@ -32,3 +32,10 @@
 ##### Updates
 
 * Updated uniswap and 1Inch controllers that update error handling
+
+### 1.0.6 (2022-06-11)
+
+##### Updates
+
+* Added method to approve spender
+* Updated constructor to accept chain parameter

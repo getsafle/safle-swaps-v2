@@ -1,8 +1,8 @@
 const Dex = require('../dex');
 
-async function getDexInstance(dex) {
+async function getDexInstance(dex, chain) {
   
-    const dexInstance = new Dex[dex]();
+    const dexInstance = new Dex[dex](chain);
     
     return dexInstance;
   }
