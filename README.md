@@ -16,11 +16,11 @@ Import the package into your project using,
 
 Initialise the swap class,
 
-`const swap = new Swap({ dex, rpcURL });`
+`const swap = new Swap({ dex, rpcURL,chain });`
 
 - `dex`  - The name of DEX using which you want to swap tokens.
 - `rpcURL`  - The rpc url to connect to a blockchain node.
-
+- `chain`  - The chain name of the blockchain. Supported for now - `ethereum` 
 > Auxiliary  Methods
 
 
@@ -84,3 +84,11 @@ Get supported DEX’s: Returns the list of all the supported DEX’s.
     - `fromContractDecimal` - decimal of source token
     - `fromQuantity` - source quantity in wei
     - `slippageTolerance` - Slippage tolerance percentage in integer
+
+6. Get approval transaction: This method returns the approval transaction
+    
+    `await swap.getRatesapprovalRawTransaction({ walletAddress, fromContractAddress, fromQuantity });`
+    
+    - `walletAddress` - public address of the wallet for the transaction
+    - `fromContractAddress` - contract address of source token
+    - `fromQuantity` - source quantity in wei

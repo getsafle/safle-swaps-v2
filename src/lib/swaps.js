@@ -5,9 +5,10 @@ const { getDexInstance } = require('../utils/helper');
 
 class Swaps {
 
-    constructor({ dex, rpcURL }) {
+    constructor({ dex, rpcURL, chain }) {
         this.dex = dex;
         this.rpcURL = rpcURL;
+        this.chain = chain;
         this.web3 = new Web3(new Web3.providers.HttpProvider(rpcURL));
     }
 
@@ -20,7 +21,7 @@ class Swaps {
 
     async getSupportedTokens() {
         if (this[this.dex] === undefined) {
-            const dexInstance = await getDexInstance(this.dex);
+            const dexInstance = await getDexInstance(this.dex, this.chain);
             this[this.dex] = dexInstance;
         }
         const response = await this[this.dex].getSupportedTokens();
@@ -30,7 +31,7 @@ class Swaps {
     async getExchangeRates({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance }) {
         try {
             if (this[this.dex] === undefined) {
-                const dexInstance = await getDexInstance(this.dex);
+                const dexInstance = await getDexInstance(this.dex, this.chain);
                 this[this.dex] = dexInstance;
             }
             const response = await this[this.dex].getExchangeRate({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance });
@@ -46,7 +47,7 @@ class Swaps {
 
         try{   
            if(this[this.dex] === undefined){
-               const dexInstance = await getDexInstance(this.dex);
+               const dexInstance = await getDexInstance(this.dex, this.chain);
                this[this.dex] = dexInstance;
            }
            const response  = await this[this.dex].getEstimatedGas({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance});
@@ -56,13 +57,29 @@ class Swaps {
             return { error: e };
         }
        }
+     
        async getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance }) {
         try{   
             if(this[this.dex] === undefined){
-                const dexInstance = await getDexInstance(this.dex);
+                const dexInstance = await getDexInstance(this.dex, this.chain);
                 this[this.dex] = dexInstance;
             }
        const response = await this[this.dex].getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance });
+
+        return response;
+        }
+        catch(e){
+            return { error: e };
+        }
+    }
+
+    async approvalRawTransaction({ walletAddress, fromContractAddress, fromQuantity }) {
+        try{   
+            if(this[this.dex] === undefined){
+                const dexInstance = await getDexInstance(this.dex, this.chain);
+                this[this.dex] = dexInstance;
+            }
+       const response = await this[this.dex].approvalRawTransaction({ walletAddress, fromContractAddress, fromQuantity });
 
         return response;
         }
@@ -78,7 +95,7 @@ class Swaps {
             const dexList = await getDex();
 
             for (let dexInstance of dexList) {
-                this[this.dex] = await getDexInstance(dexInstance);
+                this[this.dex] = await getDexInstance(dexInstance, this.chain);
 
                 rate = await this[this.dex].getExchangeRate({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance });
                
