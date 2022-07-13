@@ -39,3 +39,9 @@
 
 * Added method to approve spender
 * Updated constructor to accept chain parameter
+
+### 1.0.7 (2022-07-13)
+
+##### Updates
+
+* Updated uniswap-controller package version
