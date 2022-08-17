@@ -45,3 +45,9 @@
 ##### Updates
 
 * Updated uniswap-controller package version
+
+### 1.0.8 (2022-08-17)
+
+##### Updates
+
+* Updated uniswap-controller package version
