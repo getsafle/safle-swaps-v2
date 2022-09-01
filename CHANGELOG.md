@@ -51,3 +51,9 @@
 ##### Updates
 
 * Updated uniswap-controller package version
+
+### 1.0.9 (2022-09-01)
+
+##### Updates
+
+* Updated uniswap-controller and 1inch-controller package versions
