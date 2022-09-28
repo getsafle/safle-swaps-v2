@@ -2,6 +2,7 @@ const Web3 = require('web3');
 const response = require('../constants/responses');
 const { supportedDex } = require('../dex');
 const { getDexInstance } = require('../utils/helper');
+const tokenList = require('@getsafle/safle-token-lists');
 
 class Swaps {
 
@@ -20,12 +21,8 @@ class Swaps {
     }
 
     async getSupportedTokens() {
-        if (this[this.dex] === undefined) {
-            const dexInstance = await getDexInstance(this.dex, this.chain);
-            this[this.dex] = dexInstance;
-        }
-        const response = await this[this.dex].getSupportedTokens();
-        return response;
+        const tokens = await tokenList.getSupportedTokens(this.chain);
+        return tokens;
     }
 
     async getExchangeRates({ toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance }) {
