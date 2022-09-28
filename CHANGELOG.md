@@ -57,3 +57,9 @@
 ##### Updates
 
 * Updated uniswap-controller and 1inch-controller package versions
+
+### 1.1.0 (2022-09-28)
+
+##### Updates
+
+* Updated method to get list of supported tokens
