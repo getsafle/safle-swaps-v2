@@ -1,6 +1,6 @@
 {
   "name": "@getsafle/safle-swaps-v2",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Safle Swaps V2 SDK ",
   "main": "src/index.js",
   "scripts": {
@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/getsafle/safle-swaps-v2#readme",
   "dependencies": {
-    "@getsafle/1inch-controller": "^1.0.8",
+    "@getsafle/1inch-controller": "^1.1.1",
     "@getsafle/safle-token-lists": "^1.0.1",
-    "@getsafle/uniswap-controller": "^1.0.7",
+    "@getsafle/uniswap-controller": "^1.1.1",
     "web3": "^1.7.0"
   }
 }
