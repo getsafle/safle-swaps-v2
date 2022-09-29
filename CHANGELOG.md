@@ -70,3 +70,10 @@
 
 * Updated uniswap-controller to v1.1.0 and 1inch-controller to v1.1.0 package versions
 
+
+### 1.2.0 (2022-09-28)
+
+##### Updates
+
+* Added support for pancakeswap and quickswap
+
