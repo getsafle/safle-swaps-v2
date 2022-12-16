@@ -64,7 +64,7 @@ Get supported DEX’s: Returns the list of all the supported DEX’s.
 
 5. Get Raw Transaction: This method returns the raw transaction
     
-    `await swap.getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance })`
+    `await swap.getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, toQuantity, slippageTolerance })`
     
     - `toContractAddress` - contract address of the destination token
     - `toContractDecimal` - decimal of destination token
@@ -73,6 +73,7 @@ Get supported DEX’s: Returns the list of all the supported DEX’s.
     - `fromQuantity` - source quantity in wei
     - `walletAddress` - public address of the wallet for the transaction
     - `slippageTolerance` - Slippage tolerance percentage in integer
+    - `toQuantity` - Quantity of the tokens received post swapping. This value can be obtained from the `getExchangeRates` function.
 
 6. Get Rates: This method returns exchange rates for a token pair accross all supported DEX's
     
