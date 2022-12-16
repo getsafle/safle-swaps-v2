@@ -55,13 +55,13 @@ class Swaps {
         }
        }
      
-       async getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance }) {
+       async getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance, toQuantity }) {
         try{   
             if(this[this.dex] === undefined){
                 const dexInstance = await getDexInstance(this.dex, this.chain);
                 this[this.dex] = dexInstance;
             }
-       const response = await this[this.dex].getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance });
+       const response = await this[this.dex].getRawTransaction({ walletAddress, toContractAddress, toContractDecimal, fromContractAddress, fromContractDecimal, fromQuantity, slippageTolerance, toQuantity });
 
         return response;
         }

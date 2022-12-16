@@ -77,3 +77,9 @@
 
 * Added support for pancakeswap and quickswap
 
+### 1.2.1 (2022-12-15)
+
+##### `getRawTransaction()` accepts a new parameter `toQuantity`
+
+* [Breaking Change] - `getRawTransaction()` accepts a new parameter `toQuantity`
+* Updated the 1inch and uniswap controller versions.
