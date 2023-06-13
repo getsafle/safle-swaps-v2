@@ -83,3 +83,10 @@
 
 * [Breaking Change] - `getRawTransaction()` accepts a new parameter `toQuantity`
 * Updated the 1inch and uniswap controller versions.
+
+### 1.2.2 (2023-06-13)
+
+##### Updates
+
+* Updated 1inch controller to v1.1.6
+* updated license in package.json
