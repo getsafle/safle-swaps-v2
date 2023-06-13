@@ -1,6 +1,6 @@
 {
   "name": "@getsafle/safle-swaps-v2",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Safle Swaps V2 SDK ",
   "main": "src/index.js",
   "scripts": {
@@ -11,13 +11,13 @@
     "url": "git+https://github.com/getsafle/safle-swaps-v2.git"
   },
   "author": "getsafle",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/getsafle/safle-swaps-v2/issues"
   },
   "homepage": "https://github.com/getsafle/safle-swaps-v2#readme",
   "dependencies": {
-    "@getsafle/1inch-controller": "^1.1.5",
+    "@getsafle/1inch-controller": "^1.1.6",
     "@getsafle/pancakeswap-controller": "^1.0.0",
     "@getsafle/quickswap-controller": "^1.0.0",
     "@getsafle/safle-token-lists": "^1.0.1",
