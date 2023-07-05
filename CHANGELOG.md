@@ -97,8 +97,14 @@
 
 * Updated 1inch controller to v1.1.7
 
-### 1.2.3 (2023-06-19)
+### 1.2.4 (2023-07-01)
 
 ##### Updates
 
 * Updated 1inch controller to v1.1.8
+
+## 1.2.5 (2023-07-05)
+
+##### Updates
+
+* Updated 1inch controller to v1.1.9
