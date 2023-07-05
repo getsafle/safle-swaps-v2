@@ -21,7 +21,7 @@ class Swaps {
     }
 
     async getSupportedTokens() {
-        const tokens = await tokenList.getSupportedTokens(this.chain);
+        const tokens = await tokenList.getSupportedTokens(this.chain, this.dex);
         return tokens;
     }
 
