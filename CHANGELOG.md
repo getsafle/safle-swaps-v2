@@ -113,4 +113,4 @@
 
 ##### Updates
 
-* Updated safle-token-lists controller to v1.0.2
+* Updated safle-token-lists controller to v1.0.3
