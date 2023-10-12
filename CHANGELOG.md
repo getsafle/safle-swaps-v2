@@ -114,3 +114,9 @@
 ##### Updates
 
 * Updated safle-token-lists controller to v1.0.3
+
+## 1.2.7 (2023-10-12)
+
+##### Updates
+
+* Updated 1inch controller to v1.2.0 to handle error messages from 1Inch API's
