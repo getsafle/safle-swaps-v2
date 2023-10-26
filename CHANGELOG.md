@@ -120,3 +120,9 @@
 ##### Updates
 
 * Updated 1inch controller to v1.2.0 to handle error messages from 1Inch API's
+
+## 1.2.8 (2023-10-26)
+
+* Updated @getsafle/1inch-controller to v1.2.1 
+* Updated @getsafle/safle-token-lists to v1.0.4
+* Fixed error handling from 1Inch controller 

@@ -45,12 +45,9 @@ class Swaps {
         fromQuantity,
         slippageTolerance,
       });
-
-      if (typeof response === "object") {
+      
         return response;
-      }
 
-      return { error: response };
     } catch (e) {
       return { error: e };
     }
@@ -77,11 +74,8 @@ class Swaps {
         fromQuantity,
         slippageTolerance,
       });
-      if (typeof response === "object") {
         return response;
-      }
 
-      return { error: response };
     } catch (e) {
       return { error: e };
     }
@@ -113,11 +107,8 @@ class Swaps {
         toQuantity,
       });
 
-      if (typeof response === "object") {
         return response;
-      }
 
-      return { error: response };
     } catch (e) {
       return { error: e };
     }
@@ -139,11 +130,8 @@ class Swaps {
         fromQuantity,
       });
 
-      if (typeof response === "object") {
         return response;
-      }
 
-      return { error: response };
     } catch (e) {
       return { error: e };
     }
@@ -176,11 +164,7 @@ class Swaps {
 
         response.push({ dexInstance, rate });
       }
-      if (typeof response === "object") {
         return response;
-      }
-
-      return { error: response };
     } catch (e) {
       return { error: e };
     }
