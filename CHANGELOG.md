@@ -126,3 +126,9 @@
 * Updated @getsafle/1inch-controller to v1.2.1 
 * Updated @getsafle/safle-token-lists to v1.0.4
 * Fixed error handling from 1Inch controller 
+
+
+## 1.2.8 (2023-10-26)
+
+* Updated @getsafle/1inch-controller to v1.2.2 
+* Updated @getsafle/safle-token-lists to v1.0.5
